@@ -1,0 +1,46 @@
+<div class="sidebar bg-light">
+  <div class="accordion list-group" id="accordionExample">
+    <button class="btn btn-light text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
+      aria-controls="collapseOne">
+      <i class="fas fa-angle-down mr-3"></i>Carreras universitarias
+    </button>
+    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+      <a class="dropdown-item" href="learn" *ngFor="let c1 of category">{{c1}}</a>
+    </div>
+
+    <button class="btn collapsed btn-light text-left" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false"
+      aria-controls="collapseTwo">
+      <i class="fas fa-angle-down mr-3"></i> Cursos extracurriculares
+    </button>
+    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+      <a class="dropdown-item" href="learn" *ngFor="let c2 of category">{{c2}}</a>
+    </div>
+
+    <button class="btn collapsed btn-light text-left" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false"
+      aria-controls="collapseThree">
+      <i class="fas fa-angle-down mr-3"></i> Carreras técnicas
+    </button>
+    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+      <a (click)="SelectCategory()" class="dropdown-item" *ngFor="let n1 of numeros">{{n1}}</a>
+    </div>
+  </div>
+
+  <div class="item mt-3 mb-2">
+      Explorar
+  </div>
+  <a href="https://edutin.com/carreras-virtuales" target="_blank" class="dropdown-item">
+    Carreras
+  </a>
+  <a href="https://edutin.com/certificado-digital" target="_blank" class="dropdown-item">
+    Certificaciones
+  </a>
+  <a href="https://edutin.com/comments" target="_blank" class="dropdown-item">
+    Comunidades
+  </a>
+  <a href="https://edutin.com/payments/donations/0/0/0/0/0" target="_blank" class="dropdown-item">
+    Donaciones
+  </a>
+  <a href="https://edutin.com/pages/home" target="_blank" class="dropdown-item">
+    Acerca de Edutin
+  </a>
+</div>

@@ -1,0 +1,127 @@
+<app-sidebar></app-sidebar>
+<div class="container-fluid pl-0 pl-lg-2 pr-0 pusher">
+  <!--  -->
+  <div id="my-courses" class="segment bg-white">
+    <div class="d-flex">
+      <p class="my-auto mr-auto mb-0" (click)="toggle_cards()">Vistos recientemente</p>
+      <button type="button" class="btn btn-outline-primary my-auto py-0" (click)="toggle_cards()" *ngIf="cards">Ocultar</button>
+      <button type="button" class="btn btn-primary my-auto py-0" (click)="toggle_cards()" *ngIf="!cards">Mostrar</button>
+      <i class="fas fa-caret-left fa-2x ml-4"></i>
+      <i class="fas fa-caret-right fa-2x ml-4"></i>
+    </div>
+    <div class="card-deck mt-3" *ngIf="cards">
+      <div class="card border-0">
+        <a (click)="toggle_modal()">
+          <img class="card-img-top" src="https://d3puay5pkxu9s4.cloudfront.net/curso/3991/card_imagen.jpg?reload=1533242070212" alt="Card image cap">
+          <div class="progress-bar">
+            <div></div>
+          </div>
+        </a>
+        <div class="card-body p-0 mt-2">
+          <a (click)="toggle_modal()">
+            <p class="card-text">Curso de angular 5</p>
+          </a>
+        </div>
+        <div class="curso-active" *ngIf="modal"></div>
+      </div>
+      <div class="card border-0">
+        <a (click)="toggle_modal()">
+          <img class="card-img-top" src="https://d3puay5pkxu9s4.cloudfront.net/curso/3831/card_imagen.jpg?reload=1533242070212" alt="Card image cap">
+          <div class="progress-bar">
+            <div></div>
+          </div>
+        </a>
+        <div class="card-body p-0 mt-2">
+          <a (click)="toggle_modal()">
+            <p class="card-text">Curso de estructura de datos en c++</p>
+          </a>
+        </div>
+      </div>
+      <div class="card border-0">
+        <a (click)="toggle_modal()">
+          <img class="card-img-top" src="https://d3puay5pkxu9s4.cloudfront.net/curso/3562/card_imagen.jpg?reload=1533242070212" alt="Card image cap">
+          <div class="progress-bar">
+            <div></div>
+          </div>
+        </a>
+        <div class="card-body p-0 mt-2">
+          <a (click)="toggle_modal()">
+            <p class="card-text">Curso de desarrollo web con bootstrap, html5, css3</p>
+          </a>
+        </div>
+      </div>
+      <div class="card border-0">
+        <a (click)="toggle_modal()">
+          <img class="card-img-top" src="https://d3puay5pkxu9s4.cloudfront.net/curso/3871/card_imagen.jpg?reload=1533242071985" alt="Card image cap">
+          <div class="progress-bar">
+            <div></div>
+          </div>
+        </a>
+        <div class="card-body p-0 mt-2">
+          <a (click)="toggle_modal()">
+            <p class="card-text">Curso de desarrollo de aplicaciones para windows co</p>
+          </a>
+        </div>
+      </div>
+    </div>
+    <app-modal *ngIf="cards && modal"></app-modal>
+  </div>
+  <!--  -->
+  <ul class="nav nav-pills nav-fill bg-white segment p-0">
+    <li class="nav-item text-left">
+      <a class="nav-link disabled">Cursos en</a>
+    </li>
+    <li class="nav-item text-left bg-secondary">
+      <a class="nav-link disabled">Ingeniería</a>
+    </li>
+    <li class="nav-item dropdown text-left">
+      <a class="nav-link d-flex active" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Ingeniería informática
+        <i class="fas fa-caret-down fa-1x ml-auto my-auto"></i>
+      </a>
+      <div class="dropdown-menu w-100">
+        <a class="dropdown-item" href="#">Escuela de idiomas</a>
+        <a class="dropdown-item" href="#">Ciencias básicas</a>
+        <a class="dropdown-item" href="#">Arquitectura, arte y diseño</a>
+        <a class="dropdown-item" href="#">Administración y negocios</a>
+        <a class="dropdown-item" href="#">Medicina y ciencias de la salud</a>
+        <a class="dropdown-item" href="#">Ciencias sociales y humanas</a>
+        <a class="dropdown-item" href="#">Escuela de educación</a>
+      </div>
+    </li>
+  </ul>
+  <!--  -->
+  <div class="segment bg-white" *ngFor="let n of numeros">
+    <div class="d-flex">
+      <p class="mr-auto mb-0">Card Segment #{{n}}</p>
+      <button type="button" class="btn btn-outline-primary my-auto py-0">Ocultar</button>
+      <i class="fas fa-caret-left fa-2x ml-4"></i>
+      <i class="fas fa-caret-right fa-2x ml-4"></i>
+    </div>
+    <div class="card-deck mt-3">
+      <div class="card border-0">
+        <img class="card-img-top" src="https://d3puay5pkxu9s4.cloudfront.net/curso/3991/card_imagen.jpg?reload=1533242070212" alt="Card image cap">
+        <div class="card-body p-0 mt-2">
+          <p class="card-text">Curso de angular 5</p>
+        </div>
+      </div>
+      <div class="card border-0">
+        <img class="card-img-top" src="https://d3puay5pkxu9s4.cloudfront.net/curso/3831/card_imagen.jpg?reload=1533242070212" alt="Card image cap">
+        <div class="card-body p-0 mt-2">
+          <p class="card-text">Curso de estructura de datos en c++</p>
+        </div>
+      </div>
+      <div class="card border-0">
+        <img class="card-img-top" src="https://d3puay5pkxu9s4.cloudfront.net/curso/3562/card_imagen.jpg?reload=1533242070212" alt="Card image cap">
+        <div class="card-body p-0 mt-2">
+          <p class="card-text">Curso de desarrollo web con bootstrap, html5, css3</p>
+        </div>
+      </div>
+      <div class="card border-0">
+        <img class="card-img-top" src="https://d3puay5pkxu9s4.cloudfront.net/curso/3871/card_imagen.jpg?reload=1533242071985" alt="Card image cap">
+        <div class="card-body p-0 mt-2">
+          <p class="card-text">Curso de desarrollo de aplicaciones para windows co</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,46 @@
+<nav class="navbar navbar-expand navbar-light bg-white fixed-top">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01"
+    aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a routerLink="learn">
+    <img src="https://d3puay5pkxu9s4.cloudfront.net/img/edutin-logo-positive.svg" alt="Edutin cursos online">
+  </a>
+
+  <form class="form-inline">
+    <input class="form-control" type="text" placeholder="¿Qué quieres aprender?">
+    <button class="btn pl-4 pr-4" type="submit">
+      <i class="fas fa-search"></i>
+    </button>
+  </form>
+
+  <div class="dropdown ml-auto mr-4">
+    <button type="button" class="btn btn-primary rounded-circle" id="dropdownN" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <i class="far fa-bell"></i>
+    </button>
+    <div class="dropdown-menu dropdown-menu-right text-muted p-4" aria-labelledby="dropdownN">
+      <p>
+        Some example text that's free-flowing within the dropdown menu.
+      </p>
+      <p class="mb-0">
+        And this is more example text.
+      </p>
+    </div>
+  </div>
+  <div class="dropdown">
+    <div class="img-user rounded-circle" id="dropdownP" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <img class="rounded-circle" src="https://d3puay5pkxu9s4.cloudfront.net/Users/254898/small_imagen.jpg?nocache=1532678624">
+    </div>
+    <div class="dropdown-menu dropdown-menu-right p-0 m-0" aria-labelledby="dropdownP">
+      <a class="nav-link dropdown-item" routerLink="learn" routerLinkActive="active">
+        <i class="fas fa-home mr-3"></i>Learn</a>
+      <a class="nav-link dropdown-item" routerLink="community" routerLinkActive="active">
+        <i class="fas fa-users mr-3"></i>Community</a>
+      <a class="nav-link dropdown-item" routerLink="about" routerLinkActive="active">
+        <i class="fas fa-address-card mr-3"></i>About</a>
+      <div class="dropdown-divider"></div>
+      <a class="nav-link dropdown-item" routerLink="learn2" routerLinkActive="active">
+        <i class="fas fa-sign-out-alt mr-3"></i>Sign up</a>
+    </div>
+  </div>
+</nav>

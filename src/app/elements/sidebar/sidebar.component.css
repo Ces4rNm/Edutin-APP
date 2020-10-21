@@ -1,0 +1,31 @@
+.sidebar {
+    position: fixed;
+    top: 60px;
+    width: 300px;
+    height: auto;
+    padding-left: 50px;
+    padding-right: 20px;
+    padding-top: 22px;
+    padding-bottom: 22px;
+    transition: transform 70ms ease, -webkit-transform 70ms ease;
+    z-index: 3;
+}
+.sidebar>.accordion .btn.btn-block:hover{
+    color: white;
+}
+.btn-light:hover {
+    background-color: #f5f5f5!important;
+    border-color: whitesmoke!important;
+}
+.dropdown-item {
+    padding: 0.25rem 1rem;
+    white-space: normal;
+}
+a:not([href]):not([tabindex]):hover, a:not([href]):not([tabindex]):focus {
+    color: white;
+}
+.sidebar .item {
+    font-weight: 600;
+    color: #90949c;
+    padding-left: 1rem;
+}
